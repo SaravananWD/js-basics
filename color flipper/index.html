@@ -4,11 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Git Projects</title>
+    <title>Color Flipper - JavaScript Basics</title>
+    <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
+    <section class="container">
+        <!-- <div class="alignment-panel"></div> -->
+        <section class="content-block">
+            <p>This is a <strong class="project-name">color flipper</strong> project demo, from my
+                <strong>javascript-basic-projects</strong>
+                repository.
+            </p>
+            <p>You can find all my practice
+                projects <a href="https://github.com/SaravananWD/javascript-basic-projects" target="_blank">here</a>.
+            </p>
+            <button class="flip-color">Flip predefined colors</button>
+            <button class="flip-all-color">Flip all colors</button>
+            <div class="info-panel">The current background color is <span id="updated-color-name">#202020</span></div>
 
+
+            <section class="faq-info">
+                <p><strong>FLIP PREDEFINED COLORS</strong> button will flip color only from already given choices, which
+                    are
+                    <span id="colorsList"></span>.
+                </p>
+                <p class="rm-margin"><strong>FLIP ALL COLORS</strong> button will flip color from all possible
+                    hexadecimal color values. You can provide your custome colors <a href="#" id="user-colors">here</a>.
+                </p>
+            </section>
+        </section>
+    </section>
+    <script src="script.js"></script>
 </body>
 
 </html>
