@@ -130,6 +130,10 @@ span#updated-color-name {
         margin-left: 0px;
     }
 
+    button {
+        width: 100%;
+    }
+
     .container {
         padding: 20px 20px;
     }
