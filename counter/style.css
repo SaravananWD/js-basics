@@ -97,32 +97,6 @@ b {
 }
 
 
-@media only screen and (max-width: 740px) {
-    body {
-        padding: 15px 20px;
-    }
-
-    button.flip-all-color {
-        margin-left: 0px;
-    }
-
-    button {
-        width: 100%;
-    }
-
-    .container {
-        padding: 20px 20px;
-    }
-
-    .content-block {
-
-        border: 0;
-        padding: 0;
-    }
-
-}
-
-
 
 /* counter */
 
@@ -215,4 +189,43 @@ input:focus {
     font-size: 0.7em;
 
     color: #adadad
+}
+
+
+
+@media only screen and (max-width: 740px) {
+    body {
+        padding: 15px 20px;
+    }
+
+    button.flip-all-color {
+        margin-left: 0px;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .container {
+        padding: 20px 20px;
+    }
+
+    .content-block {
+
+        border: 0;
+        padding: 0;
+    }
+
+    .input-fields {
+        display: block;
+    }
+
+    input[type=number],
+    .submit-btn,
+    .field-group {
+        max-width: none;
+        width: 100%;
+    }
+
+
 }
