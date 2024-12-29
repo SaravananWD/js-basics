@@ -4,7 +4,6 @@ let btn = document.querySelectorAll(".btn");
 let increaseBtn = document.querySelector(".increase");
 let green = "#30bb30";
 let red = "#bb3030";
-let stop = false;
 
 btn.forEach((button) => {
   button.addEventListener("click", () => {
@@ -32,34 +31,44 @@ function setCount(count) {
 
 // Automated counter
 
-// document.getElementById("stop").addEventListener("click", () => stop == true);
-
 let submit = document.querySelector(".submit-btn");
 let statusMsg = document.querySelector(".status");
 
 submit.addEventListener("click", (e) => {
   e.preventDefault();
+
   let currentCountVal = parseInt(countVal.textContent);
   let speed = document.getElementById("speed").value;
   let limit = document.getElementById("limit").value;
 
+  validate();
+
   // Input Validation
-  if (!isNaN(speed) && !isNaN(limit)) {
-    if (speed % 1 != 0 || limit % 1 != 0) {
-      speed = Math.floor(speed);
-      limit = Math.floor(limit);
-      document.getElementById("speed").value = speed;
-      document.getElementById("limit").value = limit;
-      statusMsg.textContent = "Decimals rounded.";
-      statusMsg.style.color = green;
-    } else {
-      statusMsg.textContent = "Counter started.";
-      statusMsg.style.color = green;
+  function validate() {
+    if (speed == "" || limit == "") {
+      statusMsg.textContent = "Data not enough.";
+      statusMsg.style.color = red;
+      return;
     }
-    startCounter();
-  } else {
-    statusMsg.textContent = "Numbers only pls.";
-    statusMsg.style.color = red;
+    if (!isNaN(speed) && !isNaN(limit)) {
+      // is Number?
+      if (speed % 1 != 0 || limit % 1 != 0) {
+        // is Decimal?
+        speed = Math.floor(speed);
+        limit = Math.floor(limit);
+        document.getElementById("speed").value = speed;
+        document.getElementById("limit").value = limit;
+        statusMsg.textContent = "Decimals rounded.";
+        statusMsg.style.color = green;
+      } else {
+        statusMsg.textContent = "Counter started.";
+        statusMsg.style.color = green;
+      }
+      startCounter(speed, limit);
+    } else {
+      statusMsg.textContent = "Numbers only pls.";
+      statusMsg.style.color = red;
+    }
   }
 
   function startCounter() {
@@ -73,13 +82,21 @@ submit.addEventListener("click", (e) => {
     } else if (currentCountVal > limit) {
       let delay = 0;
       for (let i = currentCountVal - 1; i >= limit; i--) {
-        //    if (stop == false) {
         setTimeout(() => {
           count--;
           setCount(count);
         }, (currentCountVal - i - 1) * speed);
-        //  }
       }
     }
   }
 });
+
+// ms to seconds converter
+function getSeconds() {
+  let currentSpeed = document.getElementById("speed").value;
+  let inseconds = document.getElementById("inseconds");
+  inseconds.style.display = "block";
+  inseconds.innerHTML = `<strong>${currentSpeed}</strong> millisecond(s) is equal to <strong>${
+    currentSpeed / 1000
+  }</strong> second(s).`;
+}

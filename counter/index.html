@@ -22,15 +22,15 @@
             <button class="increase btn">Increase</button>
             <button class="decrease btn">Decrease</button>
             <button class="reset btn">Reset</button>
-            <button id="stop">Stop</button>
-            <h2>You want to automate?</h2>
+
+            <h2>Or you want to automate?</h2>
 
             <form action="">
                 <div class="input-fields">
 
                     <div class="field-group">
                         <label for="speed">Speed in milli seconds:</label>
-                        <input type="number" id="speed" name="speed" value="10" required />
+                        <input type="number" id="speed" name="speed" value="10" oninput="getSeconds()" required />
                     </div>
 
                     <div class="field-group"> <label for="limit">Limit when the counter stops:</label>
@@ -42,10 +42,8 @@
                     </div>
 
                 </div>
-
-
             </form>
-
+            <p id="inseconds"><strong>10</strong> millisecond(s) is equal to <strong>0.01</strong> second(s).</p>
 
             <section class="faq-info">
 

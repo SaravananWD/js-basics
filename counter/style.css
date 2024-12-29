@@ -156,6 +156,8 @@ h2 {
     font-weight: bold;
     margin-bottom: 15px;
     margin-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, .1);
+    padding-top: 20px;
 }
 
 .input-fields {
@@ -207,4 +209,10 @@ input:focus {
 .status {
     font-weight: bold;
     ;
+}
+
+#inseconds {
+    font-size: 0.7em;
+
+    color: #adadad
 }
