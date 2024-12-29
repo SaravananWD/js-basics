@@ -80,6 +80,7 @@ button.flip-all-color {
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 15px;
+
 }
 
 button.flip-all-color {
@@ -90,11 +91,16 @@ button.flip-all-color {
 button.flip-color:hover,
 button.flip-all-color:hover {
     background-color: #cdcdcd;
+
 }
 
 button.flip-color:active,
 button.flip-all-color:active {
     background-color: #dedede;
+}
+
+.transit {
+    transition: all .3s;
 }
 
 span#updated-color-name {
