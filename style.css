@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+.noto-sans-jsp {
+    font-family: "Noto Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+body,
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    line-height: 1.5;
+    font: inherit;
+    box-sizing: border-box;
+    color: #dedede;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    background: #222222;
+    padding: 20px 25px 0 25px;
+    font-size: 18px;
+    font-family: "Noto Sans", serif;
+    font-weight: 400;
+    font-variation-settings:
+        "wdth" 100;
+    font-style: normal;
+    font-optical-sizing: auto;
+}
+
+p {
+    margin-bottom: 20px;
+
+}
+
+strong.project-name,
+strong,
+b {
+    font-weight: bold;
+}
+
+.container {
+    display: block;
+
+    margin: auto;
+    background: rgba(255, 255, 255, .1);
+    border-radius: 6px;
+    min-height: 50%;
+    padding: 50px;
+}
+
+.content-block {
+    max-width: 900px;
+    margin: auto;
+    border-left: 1px solid rgba(255, 255, 255, .1);
+    border-right: 1px solid rgba(255, 255, 255, .1);
+    padding: 0 30px;
+}
+
+button.flip-color,
+button.flip-all-color {
+    background-color: #c0c0c0;
+    border: 1px solid #414141;
+    color: #303030;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+button.flip-all-color {
+    margin-left: 20px;
+
+}
+
+button.flip-color:hover,
+button.flip-all-color:hover {
+    background-color: #cdcdcd;
+}
+
+button.flip-color:active,
+button.flip-all-color:active {
+    background-color: #dedede;
+}
+
+span#updated-color-name {
+    display: inline-block;
+    padding: 5px 7px;
+    margin-left: 4px;
+    border: 1px solid #dedede;
+    font-weight: bold;
+}
+
+.info-panel {
+    margin-bottom: 40px;
+
+}
+
+.faq-info {
+    font-size: 14px;
+    border-top: 1px solid rgba(255, 255, 255, .1);
+    padding-top: 20px;
+}
+
+.faq-info .rm-margin {
+    margin-bottom: 0;
+}
+
+
+@media only screen and (max-width: 740px) {
+    body {
+        padding: 15px 20px;
+    }
+
+    button.flip-all-color {
+        margin-left: 0px;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .container {
+        padding: 20px 20px;
+    }
+
+    .content-block {
+
+        border: 0;
+        padding: 0;
+    }
+
+}
