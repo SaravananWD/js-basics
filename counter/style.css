@@ -136,7 +136,8 @@ b {
     color: #888888;
 }
 
-.btn {
+.btn,
+#stop {
     cursor: pointer;
     background-color: #c0c0c0;
     border: 1px solid #414141;
@@ -201,4 +202,9 @@ input:focus {
     max-width: 210px;
     margin: 0;
     padding: 0;
+}
+
+.status {
+    font-weight: bold;
+    ;
 }
