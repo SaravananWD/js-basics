@@ -8,5 +8,5 @@ These are some of the practice projects I developed using Vanilla JavaScript wit
 You can explore a live demo of these projects at the following link:<br/>
 [saravananwd.github.io/js-basics/](https://saravananwd.github.io/js-basics/)
 
-Thanks,<br/>
+Thanks and happy coding! &#128516;,<br/>
 Saravanan
