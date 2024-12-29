@@ -6,7 +6,7 @@ These are some of the practice projects I developed using Vanilla JavaScript wit
 - [Build 15 JavaScript Projects - Vanilla JavaScript Course](https://www.youtube.com/watch?v=3PHXvlpOkf4)
 
 You can explore a live demo of these projects at the following link:<br/>
-[Demo - JavaScript Basics](https://saravananwd.github.io/js-basics/)
+[saravananwd.github.io/js-basics/](https://saravananwd.github.io/js-basics/)
 
 Thanks,
 Saravanan
