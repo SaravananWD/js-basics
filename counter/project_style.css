@@ -1,0 +1,107 @@
+.btn,
+.submit-btn {
+    transition: all .3s;
+}
+
+.btn:hover,
+.submit-btn:hover {
+    background-color: #cdcdcd;
+}
+
+.btn:active,
+.submit-btn:active {
+    background-color: #dedede;
+}
+
+/* counter */
+
+.count {
+    font-size: 5rem;
+    line-height: 1;
+    color: #888888;
+}
+
+.btn {
+    cursor: pointer;
+    background-color: #c0c0c0;
+    border: 1px solid #414141;
+    color: #303030;
+    padding: 10px 20px;
+    font-size: .6rem;
+    font-weight: bold;
+    letter-spacing: 1pt;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.input-fields {
+    display: inline-flex;
+}
+
+.input-fields label {
+    display: inline-block;
+    font-weight: normal;
+    font-size: .8rem;
+    margin-bottom: 8px;
+}
+
+.input-fields input {
+    display: inline-block;
+}
+
+.input-fields input[type=number],
+.submit-btn {
+    width: 180px;
+    background-color: rgba(0, 0, 0, .5);
+    padding: 7px;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.submit-btn {
+    background-color: #c0c0c0;
+    border: 0;
+    color: #303030;
+    letter-spacing: 1pt;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.input-fields input:focus {
+    border-color: #000000;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.field-group {
+    max-width: 210px;
+    margin: 0;
+    padding: 0;
+}
+
+label.status {
+    font-weight: bold;
+}
+
+#inseconds {
+    color: #adadad
+}
+
+
+
+@media only screen and (max-width: 740px) {
+
+    .input-fields {
+        display: block;
+    }
+
+    .input-fields input[type=number],
+    .submit-btn,
+    .field-group {
+        max-width: none;
+        width: 100%;
+    }
+
+
+}

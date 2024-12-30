@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
-
 .noto-sans-jsp {
     font-family: "Noto Sans", serif;
     font-optical-sizing: auto;
@@ -30,7 +29,7 @@ body,
 
 body {
     background: #222222;
-    padding: 20px 25px 0 25px;
+    padding: 20px 25px;
     font-size: 1rem;
     font-family: "Noto Sans", serif;
     font-weight: 400;
@@ -45,6 +44,21 @@ p {
 
 }
 
+a:hover {
+    color: #77e4ff;
+    padding-bottom: 0px;
+    border-bottom: 1px solid #77e4ff;
+    transition: all .3s
+}
+
+a {
+    text-decoration: none;
+    color: #00ccff;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #00ccff;
+    transition: all .3s
+}
+
 strong.project-name,
 strong,
 b {
@@ -53,7 +67,6 @@ b {
 
 .container {
     display: block;
-
     margin: auto;
     background: rgba(255, 255, 255, .1);
     border-radius: 6px;
@@ -69,52 +82,36 @@ b {
     padding: 0 30px;
 }
 
-button.flip-color,
-button.flip-all-color {
+.basic-btn {
     background-color: #c0c0c0;
     border: 1px solid #414141;
     color: #303030;
-    padding: 10px 20px;
-    font-size: 1.2rem;
+    padding: 7px 14px;
     cursor: pointer;
     font-weight: bold;
-    text-transform: uppercase;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    transition: background .3s;
 }
 
-button.flip-all-color {
-    margin-left: 20px;
-
-}
-
-button.flip-color:hover,
-button.flip-all-color:hover {
+.basic-btn:hover {
     background-color: #cdcdcd;
 }
 
-button.flip-color:active,
-button.flip-all-color:active {
+.basic-btn:active {
     background-color: #dedede;
 }
 
-span#updated-color-name {
-    display: inline-block;
-    padding: 5px 7px;
-    margin-left: 4px;
-    border: 1px solid #dedede;
-    font-weight: bold;
-}
-
-.info-panel {
-    margin-bottom: 40px;
-
-}
-
-.faq-info,
-.other-info {
-    font-size: 14px;
+.new-section {
     border-top: 1px solid rgba(255, 255, 255, .1);
     padding-top: 20px;
+}
+
+.fsize-s {
+    font-size: 14px;
+}
+
+.fsize-vs {
+    font-size: 12px;
 }
 
 .rm-margin {
@@ -124,47 +121,50 @@ span#updated-color-name {
 h1 {
     font-size: 3rem;
     font-weight: 900;
-    margin-bottom: 30px;
-    ;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
 }
 
-.other-info {
+h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, .1);
+    padding-top: 20px;
+}
+
+.opaconhover {
     opacity: .4;
     transition: opacity .4s;
 }
 
-
-
-.other-info:hover {
+.opaconhover:hover {
     opacity: 1;
     cursor: default;
 }
 
-
-.project-list {
+ul {
     margin-bottom: 20px;
 }
-
-
 
 ul li {
     margin-left: 40px;
     font-size: 1rem;
-    margin-bottom: 10px;
-
+    margin-bottom: 12px;
 }
 
+.emoji {
+    font-size: 16px;
+}
 
 @media only screen and (max-width: 740px) {
     body {
         padding: 15px 20px;
     }
 
-    button.flip-all-color {
-        margin-left: 0px;
-    }
-
-    button {
+    .btnwidfull-m {
         width: 100%;
     }
 
@@ -173,12 +173,11 @@ ul li {
     }
 
     .content-block {
-
         border: 0;
         padding: 0;
     }
 
-    .other-info {
+    .opaconhover {
         opacity: 1;
     }
 

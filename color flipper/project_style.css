@@ -1,0 +1,51 @@
+button.flip-color,
+button.flip-all-color {
+    background-color: #c0c0c0;
+    border: 1px solid #414141;
+    color: #303030;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    transition: background .3s;
+}
+
+button.flip-all-color {
+    margin-left: 20px;
+}
+
+button.flip-color:hover,
+button.flip-all-color:hover {
+    background-color: #cdcdcd;
+}
+
+button.flip-color:active,
+button.flip-all-color:active {
+    background-color: #dedede;
+}
+
+span#updated-color-name {
+    display: inline-block;
+    padding: 5px 7px;
+    margin-left: 4px;
+    border: 1px solid #dedede;
+    font-weight: bold;
+}
+
+.info-panel {
+    margin-bottom: 40px;
+}
+
+@media only screen and (max-width: 740px) {
+    button.flip-all-color {
+        margin-left: 0px;
+    }
+
+    button {
+        /* do not remove */
+        width: 100%;
+    }
+
+}

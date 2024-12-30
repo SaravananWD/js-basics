@@ -49,6 +49,10 @@ submit.addEventListener("click", (e) => {
       statusMsg.textContent = "Data not enough.";
       statusMsg.style.color = red;
       return;
+    } else if (limit == currentCountVal) {
+      statusMsg.textContent = "Limit already reached.";
+      statusMsg.style.color = red;
+      return;
     }
     if (!isNaN(speed) && !isNaN(limit)) {
       // is Number?
