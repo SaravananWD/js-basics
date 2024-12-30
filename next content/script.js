@@ -155,6 +155,12 @@ document.querySelector(".next").addEventListener("click", () => {
   updateContent(currentIndex);
 });
 
+document.querySelector(".random").addEventListener("click", () => {
+  currentIndex = Math.floor(Math.random() * content.length);
+  console.log(currentIndex);
+  updateContent(currentIndex);
+});
+
 function updateContent(c) {
   let cont = content[c];
   let defaultTextColor = "#dedede";

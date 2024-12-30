@@ -111,3 +111,9 @@ a.card-btn:active {
         margin-bottom: 20px;
     }
 }
+
+@media only screen and (max-width: 400px) {
+    .card {
+        width: 100%;
+    }
+}
