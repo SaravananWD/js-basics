@@ -135,12 +135,12 @@ h2 {
     padding-top: 20px;
 }
 
-.opaconhover {
+.opaconhover p {
     opacity: .4;
     transition: opacity .4s;
 }
 
-.opaconhover:hover {
+.opaconhover:hover p {
     opacity: 1;
     cursor: default;
 }
@@ -177,7 +177,7 @@ ul li {
         padding: 0;
     }
 
-    .opaconhover {
+    .opaconhover p {
         opacity: 1;
     }
 
