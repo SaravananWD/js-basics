@@ -52,7 +52,7 @@
 
 .car .group-text {
     display: block;
-    height: 155px;
+    height: 180px;
     overflow: hidden;
 }
 
@@ -119,6 +119,8 @@ a.card-btn:active {
 
 @media only screen and (max-width: 400px) {
     .card {
+
         width: 100%;
+        width: 280px;
     }
 }
