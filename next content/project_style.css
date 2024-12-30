@@ -50,12 +50,6 @@
 
 }
 
-.car .group-text {
-    display: block;
-    height: 180px;
-    overflow: hidden;
-}
-
 a.card-btn {
     background-color: #e34425;
     color: #dedede;
@@ -119,8 +113,13 @@ a.card-btn:active {
 
 @media only screen and (max-width: 400px) {
     .card {
-
         width: 100%;
-        width: 280px;
+        min-width: 280px;
+    }
+
+    .card .group-text {
+        display: block;
+        height: 200px;
+        overflow: hidden;
     }
 }
