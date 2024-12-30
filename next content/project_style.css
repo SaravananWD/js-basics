@@ -47,8 +47,12 @@
     margin-bottom: 15px;
     line-height: 1.5;
     font-size: 0.9rem;
+
+}
+
+.car .group-text {
     display: block;
-    height: 135px;
+    height: 155px;
     overflow: hidden;
 }
 
@@ -112,10 +116,9 @@ a.card-btn:active {
     }
 }
 
-/*
+
 @media only screen and (max-width: 400px) {
     .card {
         width: 100%;
     }
 }
-    */
