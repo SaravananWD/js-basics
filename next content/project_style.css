@@ -112,8 +112,10 @@ a.card-btn:active {
     }
 }
 
+/*
 @media only screen and (max-width: 400px) {
     .card {
         width: 100%;
     }
 }
+    */
