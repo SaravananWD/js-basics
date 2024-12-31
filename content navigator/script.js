@@ -63,6 +63,7 @@ const content = [
     about:
       "Node.js allows JavaScript to run outside the browser, enabling backend development. It's known for its event-driven, non-blocking architecture and vast package ecosystem.",
     color: "#8cc84b",
+    textColor: "#444444",
     link: "https://nodejs.org/docs/latest/api/",
   },
   {
