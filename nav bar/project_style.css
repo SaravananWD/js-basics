@@ -92,7 +92,8 @@ h2 {
     }
 
     .show-links .navlinks {
-        height: 218px;
+
+        height: 215px;
         opacity: 1;
         transition: height .3s ease-in, opacity .4s;
     }
