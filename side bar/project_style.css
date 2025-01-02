@@ -1,0 +1,151 @@
+/* Project related CSS */
+
+h2 {
+    margin-top: 0;
+    border: 0;
+}
+
+
+.btn-s {
+    padding: 3px 5px;
+    margin-left: 7px;
+    margin-right: 0;
+    font-size: .8rem;
+}
+
+.css-option-title,
+.btn-s {
+    display: inline-block;
+}
+
+
+.inner-body {
+    position: relative;
+    border: 1px solid #adff2f;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.sidebarproj-tab {
+    display: inline-block;
+    padding: 3px 7px;
+    font-size: .8rem;
+    background-color: #adff2f;
+    color: #444;
+    font-weight: bold;
+    margin-left: 8px;
+}
+
+.sidebarproj .new-section {
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 0;
+}
+
+.sidebarproj .logo-area {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+    padding-bottom: 20px;
+}
+
+.inner-body h2,
+.inner-body p {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.sidebarproj .logo-area .logo,
+.sidebarproj .logo {
+    font-size: 1.1rem;
+    font-weight: bolder;
+}
+
+button.navbutton {
+    display: inherit;
+    background: none;
+    cursor: pointer;
+}
+
+.navbutton img {
+    width: 30px;
+    height: 30px;
+}
+
+.show-sidebar button.close img {
+    transform: rotate(0deg);
+    transition: transform 1.5s ease-out;
+}
+
+button.close img {
+    transform: rotate(180deg);
+}
+
+/*
+.show-sidebar button.open img {
+    transform: rotate(-90deg);
+}
+
+button.open img {
+    transform: rotate(0deg);
+    transition: transform .3s ease-out;
+}*/
+
+aside.navlinks .logo-area {
+    padding-top: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+aside.navlinks {
+    position: absolute;
+    top: 0;
+    background-color: #202020;
+    width: 100%;
+    height: 100%;
+    padding: 0 15px;
+    /*  transform: translate(-100%, -100%) rotate(-45deg); */
+    transform: translate(-100%);
+    transition: transform .5s;
+}
+
+.show-sidebar aside.navlinks {
+    /* transform: translate(0) rotate(0); */
+    transform: translate(0);
+}
+
+aside.navlinks ul {
+    margin: 0;
+    margin-top: 10px;
+}
+
+aside.navlinks ul li {
+    margin: 0;
+    list-style: none;
+}
+
+
+aside.navlinks ul li a {
+    display: block;
+    color: #dedede;
+    border: 0;
+    padding: 10px 0;
+    transition: all .2s linear;
+}
+
+aside.navlinks ul li a:hover {
+    background-color: rgba(0, 0, 0, .6);
+    padding-left: 10px;
+}
+
+@media screen and (min-width: 740px) {
+    /* for screens larger than 740px */
+
+    aside.navlinks {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+/* @media only screen and (max-width: 740px) {} */
