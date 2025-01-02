@@ -101,6 +101,12 @@ b {
     background-color: #dedede;
 }
 
+.btn-s {
+    padding: 3px 5px;
+    margin-right: 0;
+    font-size: .8rem;
+}
+
 .alt-btn {}
 
 
