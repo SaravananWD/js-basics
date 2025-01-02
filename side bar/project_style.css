@@ -141,6 +141,11 @@ aside.navlinks ul li a:hover {
         width: 100%;
         max-width: 400px;
     }
+
 }
 
-/* @media only screen and (max-width: 740px) {} */
+@media only screen and (max-width: 740px) {
+    .css-option {
+        display: none;
+    }
+}
