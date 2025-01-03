@@ -1,0 +1,57 @@
+/* Project related CSS */
+
+.questions-container {
+    margin-bottom: 20px;
+}
+
+.question {
+    max-width: 600px;
+    border: 1px solid rgba(255, 255, 255, .2);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+
+.question-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.question-title p {
+    padding: 15px;
+    margin: 0;
+    font-weight: bold;
+}
+
+.question-btn {
+    background: transparent;
+    cursor: pointer;
+    padding: 15px;
+    padding-top: 20px;
+}
+
+.question-btn img {
+    padding: 0;
+    margin: 0;
+}
+
+.close-btn {
+    display: none;
+}
+
+.question .answer {
+    padding: 0 15px;
+    display: none;
+}
+
+.show-answer .answer {
+    padding: 0 15px;
+    display: block;
+}
+
+.question .answer p {
+    border-top: 1px solid rgba(255, 255, 255, .2);
+    padding-top: 15px;
+    margin-bottom: 15px;
+}
