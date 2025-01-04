@@ -82,7 +82,8 @@ b {
     padding: 0 30px;
 }
 
-.basic-btn {
+.basic-btn,
+.btn-s {
     background-color: #c0c0c0;
     border: 1px solid #414141;
     color: #303030;
