@@ -8,8 +8,6 @@
     margin-bottom: 20px;
 }
 
-.menu-item {}
-
 img.menu-item-img {
     width: 100%;
     object-fit: cover;
@@ -26,4 +24,16 @@ img.menu-item-img {
 .filter-btn {
     margin-right: 2px;
     text-transform: capitalize;
+}
+
+@media only screen and (max-width: 740px) {
+    .menu-container {
+        max-width: 250px;
+        display: grid;
+        gap: 20px 20px;
+        grid-template-columns: 100%;
+
+        margin: auto;
+        margin-bottom: 20px;
+    }
 }
