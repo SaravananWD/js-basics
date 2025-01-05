@@ -419,6 +419,9 @@ function displayFilterButtons(menuSelected) {
       ["all"]
     )
     .map((category) => {
+      if (category == "all") {
+        return `<button class="btn-s filter-btn btn-active" data-id="${category}">${category}</button>`;
+      }
       return `<button class="btn-s filter-btn" data-id="${category}">${category}</button>`;
     })
     .join("");
@@ -429,17 +432,29 @@ function displayFilterButtons(menuSelected) {
 
   filterButtons.forEach((btn) => {
     btn.addEventListener("click", (e) => {
-      currentCategory = e.currentTarget.dataset.id;
-      menuCategory = menu.filter((item) => {
+      let btnActive = e.currentTarget;
+      let currentCategory = btnActive.dataset.id;
+
+      let menuCategory = menu.filter((item) => {
         if (item.category === currentCategory) {
           return item;
         }
       });
+
       if (currentCategory === "all") {
         displayMenuItems(menu);
+        btnActive.classList.add("btn-active");
       } else {
         displayMenuItems(menuCategory);
       }
+
+      filterButtons.forEach((btn) => {
+        if (btn == btnActive) {
+          btn.classList.add("btn-active");
+        } else {
+          btn.classList.remove("btn-active");
+        }
+      });
     });
   });
 }

@@ -32,8 +32,7 @@ img.menu-item-img {
         display: grid;
         gap: 20px 20px;
         grid-template-columns: 100%;
-
-        margin: auto;
+        /* margin: auto; */
         margin-bottom: 20px;
     }
 }
