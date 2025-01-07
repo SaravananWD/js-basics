@@ -38,5 +38,6 @@ img.menu-item-img {
     }
 
     img.menu-item-img {
+        width: auto;
         height: 160px;
     }
