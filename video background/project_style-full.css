@@ -1,0 +1,99 @@
+/* Project related CSS */
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.video-content {
+    min-height: 100vh;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+h1.video-heading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.switch-btn {
+    position: absolute;
+    bottom: 7%;
+    left: 7%;
+    background-color: rgba(255, 255, 255, .8);
+    display: inline-block;
+    line-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10px;
+}
+
+.switch-btn span {
+    display: inline-block;
+    margin: 0;
+    width: 3.5rem;
+    text-align: center;
+    padding: 3px 0;
+    border-radius: 10px;
+}
+
+span.pause,
+span.play {
+    color: #000;
+    font-size: .8rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+span.switch {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #444;
+    width: 50%;
+    height: 100%;
+    transition: left .3s;
+}
+
+.slide .switch {
+    left: 50%;
+}
+
+
+#preloader {
+    background-color: #202020;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+
+.hide-preloader {
+    visibility: hidden;
+    z-index: -99;
+}

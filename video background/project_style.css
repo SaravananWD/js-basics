@@ -1,68 +1,37 @@
 /* Project related CSS */
 
-body {
-    margin: 0;
-    padding: 0;
-}
 
-.video-content {
-    min-height: 100vh;
+.inner-body {
     position: relative;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
+    border: 1px solid #adff2f;
+    overflow: hidden;
+    margin-bottom: 20px;
 }
 
-.video-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-}
-
-h1.video-heading {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.switch-btn {
-    position: absolute;
-    bottom: 7%;
-    left: 7%;
-    background-color: rgba(255, 255, 255, .8);
+.sidebarproj-tab {
     display: inline-block;
-    line-height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 7rem;
-}
-
-.switch-btn span {
-    display: inline-block;
-    margin: 0;
-}
-
-span.pause,
-span.play {
-    color: #000;
+    padding: 3px 7px;
     font-size: .8rem;
-    font-weight: 600;
-    cursor: pointer;
+    background-color: #adff2f;
+    color: #444;
+    font-weight: bold;
+    margin-left: 8px;
 }
 
-span.slide {
+.inner-body h1 {
+    font-size: 2.2rem;
+}
+
+#preloader {
     position: absolute;
-    top: 0;
-    left: 0;
-    background-color: #00ccff;
-    opacity: .9;
-    width: 50%;
-    height: 100%;
+}
+
+@media screen and (min-width: 740px) {
+    /* for screens larger than 740px */
+
+
+    .inner-body h1 {
+        font-size: 2.2rem;
+    }
+
 }
