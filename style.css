@@ -59,6 +59,12 @@ a {
     transition: all .3s
 }
 
+a.rm-link-style {
+    color: #444;
+    text-decoration: none;
+    border: 0;
+}
+
 strong.project-name,
 strong,
 b {
@@ -181,6 +187,8 @@ ul li {
 .btn-active {
     background-color: #00ccff;
 }
+
+
 
 @media only screen and (max-width: 740px) {
     body {

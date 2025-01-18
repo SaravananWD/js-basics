@@ -26,6 +26,10 @@
     position: absolute;
 }
 
+a.rm-link-style {
+    color: #444;
+}
+
 @media screen and (min-width: 740px) {
     /* for screens larger than 740px */
 
