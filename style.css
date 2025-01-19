@@ -170,11 +170,13 @@ h3 {
     cursor: default;
 }
 
-ul {
+ul,
+ol {
     margin-bottom: 20px;
 }
 
-ul li {
+ul li,
+ol li {
     margin-left: 40px;
     font-size: 1rem;
     margin-bottom: 12px;
