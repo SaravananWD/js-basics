@@ -112,8 +112,7 @@ footer.dummy-section span.copytext {
     text-transform: lo;
     letter-spacing: .05rem;
     display: inline-block;
-    padding: 3rem 0px;
-
+    padding: 3.5rem 0px;
 }
 
 .navbar {
@@ -146,8 +145,7 @@ a.top {
     border: 0;
     background: linear-gradient(135deg, #002040, #003366);
     border-radius: 5px;
-    opacity: .9;
-    border: 1px solid rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.7);
     visibility: hidden;
 }
 
@@ -156,7 +154,7 @@ a.show-link {
 }
 
 a.top:hover {
-    opacity: 1;
+    box-shadow: 0px 0px 20px 7px rgba(0, 0, 0, .4);
     transition: all .3s;
 }
 
@@ -260,4 +258,23 @@ a.top:hover {
         border: 0;
     }
 
+}
+
+#preloader {
+    background-color: #202020;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+
+.hide-preloader {
+    visibility: hidden;
+    z-index: -99;
 }

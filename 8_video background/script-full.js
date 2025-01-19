@@ -1,5 +1,6 @@
 /* Project related JavaScript */
 
+// video control
 let video = document.querySelector(".video-container");
 let btn = document.querySelector(".switch-btn");
 let playBtn = document.querySelector(".play");
@@ -14,6 +15,7 @@ pauseBtn.addEventListener("click", () => {
   video.pause();
 });
 
+// preloader
 let preloader = document.getElementById("preloader");
 
 window.addEventListener("load", () => {

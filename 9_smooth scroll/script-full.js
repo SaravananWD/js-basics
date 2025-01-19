@@ -75,3 +75,10 @@ scrollLinks.forEach((link) => {
     navBar.classList.remove("show-links");
   });
 });
+
+// preloader
+let preloader = document.getElementById("preloader");
+
+window.addEventListener("load", () => {
+  preloader.classList.add("hide-preloader");
+});
