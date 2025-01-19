@@ -10,7 +10,7 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 0;
+    padding: 20px 20px;
 }
 
 .navbar .logo-area .logo {
@@ -44,23 +44,6 @@ h2 {
     color: #00ccff;
 }
 
-.emulate-section {
-    opacity: 100;
-    display: block;
-    transition: all .4s;
-}
-
-.emulate-section .btn-s {
-    margin-right: 5px;
-}
-
-#emulatebtnstatus {
-    display: none;
-    background-color: #881111;
-    font-size: .8rem;
-    padding: 3px 5px;
-}
-
 @media only screen and (min-width: 740px) {
     .links-container {
         height: auto !important;
@@ -85,7 +68,6 @@ h2 {
     .show-links button.navbutton {
         rotate: -90deg;
     }
-
 
     .navbutton img {
         width: 30px;
@@ -116,8 +98,8 @@ h2 {
         overflow: hidden;
     }
 
-    /* .show-links .links-container {
-        height: 215px; // dynamically set using js 
+    /* 
+    .show-links .navlinks {
         opacity: 1;
         transition: height .3s ease-in, opacity .4s;
     } */
@@ -146,9 +128,72 @@ h2 {
         border: 0;
     }
 
-    .emulate-section {
-        opacity: 0;
-        display: none;
-    }
+}
 
+/* new css */
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container-full {
+    width: 100%;
+}
+
+.content-w {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.content-w h2 {
+    border: 0;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+header {
+    background: linear-gradient(rgba(38, 0, 63, 0.5), rgba(0, 0, 0, 0.7)),
+        url(img/bag.jpg) center/cover no-repeat;
+}
+
+.banner {
+    min-height: 80vh;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    max-width: 800px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+a.scroll-cta-btn {
+    display: inline-block;
+    padding: .5rem .8rem;
+    border: 1px solid #00ccff;
+    margin-top: 10px;
+}
+
+.dummy-section {
+    min-height: 80vh;
+}
+
+.section-altbg {
+    background-color: #111111;
+}
+
+footer.dummy-section {
+    background: linear-gradient(rgba(38, 0, 63, 0.5), rgba(0, 0, 0, 0.7));
+    min-height: auto;
+    text-align: center;
+}
+
+footer.dummy-section span.copytext {
+    font-size: .8rem;
+    color: #dedede;
+    font-weight: 400;
+    text-transform: lo;
+    letter-spacing: .05rem;
+    display: inline-block;
+    padding: 20px;
 }
