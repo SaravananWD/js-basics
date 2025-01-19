@@ -12,51 +12,52 @@
 <body>
 
     <section class="container-full">
-        <header>
-            <nav class="navbar content-w">
+        <header id="home">
+            <div class="nav-container">
+                <nav class="navbar">
 
-                <div class="logo-area">
-                    <div class="logo">LOGO TEXT</div>
-                    <button class="navbutton"><img src="./img/icon_60x60.png"></button>
-                </div>
-                <div class="links-container">
-                    <ul class="navlinks">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Projects</a></li>
-                        <li><a href="#">Resources</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </div>
-            </nav>
+                    <div class="logo-area">
+                        <div class="logo">LOGO TEXT</div>
+                        <button class="navbutton"><img src="./img/icon_60x60.png"></button>
+                    </div>
+                    <div class="links-container">
+                        <ul class="navlinks">
+                            <li><a href="#home" class="scroll-link">Home</a></li>
+                            <li><a href="#about" class="scroll-link">About</a></li>
+                            <li><a href="#projects" class="scroll-link">Projects</a></li>
+                            <li><a href="#resources" class="scroll-link">Resources</a></li>
+                            <li><a href="#contact" class="scroll-link">Contact</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
             <section class="banner content-w">
                 <div class="banner-content">
                     <h1>Project: Smooth Scroll</h1>
                     <p>Lorem ipsum dolor sit amet. Eos impedit sint est officia aliquid ut quos consequuntur ut autem
                         obcaecati
-                        ut nisi vero. Et harum quod est ipsa quam eos porro perferendis aut distinctio quia ut vitae
-                        temporibus.
+                        ut nisi vero. Et harum quod est ipsa quam.
                     </p>
                     <a href="#projects" class="scroll-link scroll-cta-btn">Explore Projects</a>
                 </div>
             </section>
         </header>
-        <section class="dummy-section">
+        <section id="about" class="dummy-section">
             <div class="content-w">
                 <h2>About</h2>
             </div>
         </section>
-        <section class="dummy-section section-altbg">
+        <section id="projects" class="dummy-section section-altbg">
             <div class="content-w">
                 <h2>Projects</h2>
             </div>
         </section>
-        <section class="dummy-section">
+        <section id="resources" class="dummy-section">
             <div class="content-w">
                 <h2>Resources</h2>
             </div>
         </section>
-        <section class="dummy-section section-altbg">
+        <section id="contact" class="dummy-section section-altbg">
             <div class="content-w">
                 <h2>Contact</h2>
             </div>
@@ -68,8 +69,8 @@
         </footer>
 
     </section>
-
-    <script src="script-full.js"></script>
+    <a href="#home" class="scroll-link top"><img src="img/top_icon_64.png" </a>
+        <script src="script-full.js"></script>
 </body>
 
 </html>

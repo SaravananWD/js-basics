@@ -1,6 +1,7 @@
 /* Project related CSS */
-
-/* Project related CSS */
+html {
+    scroll-behavior: smooth;
+}
 
 h2 {
     margin-top: 0;
@@ -10,7 +11,7 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 20px;
+    padding: 20px 0px;
 }
 
 .navbar .logo-area .logo {
@@ -44,91 +45,7 @@ h2 {
     color: #00ccff;
 }
 
-@media only screen and (min-width: 740px) {
-    .links-container {
-        height: auto !important;
-    }
-}
 
-
-@media only screen and (max-width: 740px) {
-
-    h2 {
-        border: 0;
-    }
-
-    button.navbutton {
-        display: inherit;
-        background: none;
-        cursor: pointer;
-        transition: rotate .3s;
-    }
-
-
-    .show-links button.navbutton {
-        rotate: -90deg;
-    }
-
-    .navbutton img {
-        width: 30px;
-        height: 30px;
-    }
-
-    .navbar .logo-area {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding-bottom: 20px;
-        border-bottom: 1px solid rgba(255, 255, 255, .1);
-    }
-
-    .navbar {
-        display: block;
-        padding-bottom: 0;
-        position: relative;
-    }
-
-    .links-container {
-        position: absolute;
-        background-color: #111111;
-        width: 100%;
-        height: 0;
-        /* opacity: 0; */
-        transition: height .3s ease-out, opacity 1s;
-        overflow: hidden;
-    }
-
-    /* 
-    .show-links .navlinks {
-        opacity: 1;
-        transition: height .3s ease-in, opacity .4s;
-    } */
-
-    .navbar ul {
-        border: 1px solid rgba(255, 255, 255, .1);
-        border-top: 0;
-        border-radius: 0 0 10px 10px;
-    }
-
-    .navbar ul li {
-        display: block;
-        margin: 0;
-        list-style: none;
-        padding: 0 8px;
-    }
-
-    .navbar ul li a {
-        display: block;
-        padding: 10px;
-        padding-left: 2px;
-        border-bottom: 1px solid rgba(255, 255, 255, .1);
-    }
-
-    .navbar ul li:last-child a {
-        border: 0;
-    }
-
-}
 
 /* new css */
 
@@ -183,7 +100,7 @@ a.scroll-cta-btn {
 }
 
 footer.dummy-section {
-    background: linear-gradient(rgba(38, 0, 63, 0.5), rgba(0, 0, 0, 0.7));
+    background: linear-gradient(135deg, #002040, #003366, #002040);
     min-height: auto;
     text-align: center;
 }
@@ -195,5 +112,152 @@ footer.dummy-section span.copytext {
     text-transform: lo;
     letter-spacing: .05rem;
     display: inline-block;
-    padding: 20px;
+    padding: 2rem 0px;
+
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.nav-container {
+    width: 100%;
+}
+
+.fixed-nav {
+    background-color: #003366;
+    background: linear-gradient(135deg, #002040, #003366);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: all .2s;
+}
+
+a.top {
+    display: inline-block;
+    position: fixed;
+    bottom: 7%;
+    right: 7%;
+    padding: 3px 6px 0px 6px;
+    border: 0;
+    background: linear-gradient(135deg, #002040, #003366);
+    border-radius: 5px;
+    opacity: .9;
+    border: 1px solid rgba(0, 0, 0, 0.7);
+    visibility: hidden;
+}
+
+a.show-link {
+    visibility: visible;
+}
+
+a.top:hover {
+    opacity: 1;
+    transition: all .3s;
+}
+
+.top img {
+    width: 28px;
+}
+
+
+
+/* resp. */
+
+
+@media only screen and (min-width: 740px) {
+    .links-container {
+        height: auto !important;
+    }
+}
+
+
+@media only screen and (max-width: 740px) {
+
+    h2 {
+        border: 0;
+    }
+
+    button.navbutton {
+        display: inherit;
+        background: none;
+        cursor: pointer;
+        transition: rotate .3s;
+    }
+
+    .show-links button.navbutton {
+        rotate: -90deg;
+    }
+
+    .navbutton img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .navbar .logo-area {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, .1);
+    }
+
+    .fixed-nav .logo-area {
+        border: 0;
+    }
+
+    .navbar {
+        display: block;
+        padding-bottom: 0;
+        position: relative;
+        margin-left: 20px;
+        margin-right: 20px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .links-container {
+        position: absolute;
+        width: 100%;
+        height: 0;
+        transition: height .3s ease-out, opacity 1s;
+        overflow: hidden;
+
+    }
+
+    /* 
+    .show-links .navlinks {
+        opacity: 1;
+        transition: height .3s ease-in, opacity .4s;
+    } */
+
+    .navbar ul {
+        background-color: #002040;
+        border: 1px solid rgba(255, 255, 255, .1);
+        border-top: 0;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .navbar ul li {
+        display: block;
+        margin: 0;
+        list-style: none;
+        padding: 0 8px;
+    }
+
+    .navbar ul li a {
+        display: block;
+        padding: 10px;
+        padding-left: 2px;
+        border-bottom: 1px solid rgba(255, 255, 255, .1);
+    }
+
+    .navbar ul li:last-child a {
+        border: 0;
+    }
+
 }
