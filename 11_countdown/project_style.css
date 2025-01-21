@@ -1,0 +1,53 @@
+/* Project related CSS */
+
+.time-target {
+    /* border-left: 2px solid #ffdbb4;
+    padding-left: .6rem; */
+    margin-bottom: 1.4rem;
+    /* color: #ffdbb4; */
+}
+
+.time-target .target-value {
+    letter-spacing: .0715rem;
+    text-transform: uppercase;
+    background-color: rgba(0, 0, 0, .3);
+    font-weight: 600;
+    display: inline-block;
+    padding: .2rem .4rem;
+    margin-left: .1rem;
+}
+
+.time-container {
+    margin-bottom: 1.4rem;
+    display: flex;
+}
+
+/* .time-container p - set in javascript */
+.time-container p {
+    margin: 0;
+    color: #f76d6d;
+}
+
+.time-element {
+    display: grid;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .3);
+    width: 5rem;
+    height: 5rem;
+    margin-right: 1rem;
+    letter-spacing: .0715rem;
+}
+
+.time-element h4 {
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 100%;
+    margin-bottom: .1rem;
+}
+
+.time-element span {
+    font-size: .75rem;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, .6);
+}
