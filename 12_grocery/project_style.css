@@ -1,1 +1,104 @@
 /* Project related CSS */
+
+.input-form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+}
+
+input#textbox,
+input#submit {
+    background-color: rgba(0, 0, 0, .4);
+    padding: 10px;
+    color: #c0c0c0;
+    width: 100%;
+}
+
+input#textbox {
+    width: 80%;
+    outline: none;
+}
+
+input#submit {
+    background-color: rgba(0, 0, 0, .6);
+    cursor: pointer;
+    width: 20%;
+    min-width: 150px;
+    /* transition: background .3s; */
+}
+
+input#submit:hover {
+    background-color: rgba(0, 0, 0, .9);
+    background-color: rgb(0 90 179 / 60%);
+}
+
+.todo-container h3,
+.todo-container h3 span {
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, .6);
+}
+
+.todo-container h3 span {
+    /* font-style: italic; */
+    color: rgba(255, 255, 255, .7);
+    /* display: inline-block;
+    background-color: rgba(0, 0, 0, .6);
+    padding: 3px 5px;
+    font-weight: bold;
+    font-size: 1rem; */
+    /* border-bottom: 1px solid #00ccff; */
+
+}
+
+.todo-item {
+    /* border-top: 1px solid rgba(255, 255, 255, .1); */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.todo-text {
+    width: 80%;
+    /* font-weight: 600; */
+    background: linear-gradient(to right, rgb(0 35 70 / 60%), #000);
+    padding: 10px 12px;
+    /* padding-left: 0; */
+    color: #ccc;
+}
+
+.todo-item .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 20%;
+}
+
+.todo-item button {
+    background-color: rgba(0, 0, 0, .3);
+    padding: 10px 0;
+    cursor: pointer;
+    color: #b8b8b8;
+    width: 100%;
+
+}
+
+
+.todo-item .btn-edit {
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.todo-item .btn-delete {
+    background-color: rgba(0, 0, 0, .3);
+}
+
+.todo-item .btn-edit:hover {
+    background-color: rgb(0 90 179 / 60%);
+}
+
+.todo-item .btn-delete:hover {
+    background-color: rgb(179 0 0 / 60%);
+}
