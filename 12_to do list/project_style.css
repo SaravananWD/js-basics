@@ -199,4 +199,9 @@ button.no-clear {
         width: 100%;
     }
 
+
+    .alert-message {
+        width: 80%;
+    }
+
 }
