@@ -140,3 +140,63 @@ input#submit:hover {
     box-shadow: 0 0 15px 3px rgba(0, 0, 0, .2);
     transition: opacity 0.3s ease-in-out, top 0.3s ease-in-out;
 }
+
+
+.todo-footer,
+.clear-btn {
+    display: none;
+}
+
+
+.todo-footer p {
+    margin-bottom: 10px;
+    font-size: .9rem;
+    color: #c0c0c0;
+    font-weight: 600;
+}
+
+.clear-btn,
+.confirm-buttons button {
+    background-color: #202020;
+    color: #b8b8b8;
+    font-weight: 600;
+    padding: 5px 15px;
+    min-width: 150px;
+    font-size: .8rem;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.confirm-buttons {
+    display: none;
+}
+
+button.no-clear {
+    background-color: #0e1844;
+}
+
+
+
+@media only screen and (max-width: 740px) {
+    .todo-item {
+        /* border-top: 1px solid rgba(255, 255, 255, .1); */
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 15px;
+    }
+
+    .todo-text {
+        width: 100%;
+    }
+
+    .todo-item .buttons {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+}

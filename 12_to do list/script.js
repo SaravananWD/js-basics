@@ -5,6 +5,13 @@
 const todoItemsContainer = document.querySelector(".todo-items-list");
 const submitBtn = document.getElementById("submit");
 const textBox = document.querySelector("#textbox");
+const key = "list";
+const clearBtn = document.querySelector(".clear-btn");
+const clearBtnFooter = document.querySelector(".todo-footer");
+const confirmBtns = document.querySelector(".confirm-buttons");
+const yesBtn = document.querySelector(".yes-clear");
+const noBtn = document.querySelector(".no-clear");
+const clearQuestion = document.querySelector("#clear-question");
 let todoItemsArr = [];
 let editFlag = false;
 
@@ -33,6 +40,25 @@ submitBtn.addEventListener("click", (e) => {
     editItem(textBoxValue, id);
   }
 });
+
+function initSetup() {
+  if (!localStorage.getItem(key) || localStorage.getItem(key) == "[]") {
+    isEmpty(true);
+    // localStorage.setItem(key, JSON.stringify(todoItemsArr));
+  } else {
+    todoItemsArr = JSON.parse(localStorage.getItem(key));
+    todoItemsArr.forEach((item) => {
+      todoItemsContainer.innerHTML += `<div data-id="${item.id}" class="todo-item"><div class="todo-text">${item.value}</div>
+                        <div class="buttons">
+                            <button class="btn-edit">Edit</button>
+                            <button class="btn-delete">Delete</button>
+                        </div>
+                        </div>`;
+    });
+    // clear button visibility
+    updateClearBtnVisibility();
+  }
+}
 
 function addItem(value, id) {
   // add to data array
@@ -67,10 +93,10 @@ function addItem(value, id) {
   alert("New Task added!", "positive");
 
   // add to storage
-}
+  localStorage.setItem(key, JSON.stringify(todoItemsArr));
 
-function initSetup() {
-  isEmpty(true);
+  // clear button visibility
+  updateClearBtnVisibility();
 }
 
 function isEmpty(empty) {
@@ -104,6 +130,9 @@ function editItem(value, id) {
 
       // update on data array
       putCurrentValueToArr(value, id);
+
+      // clear button visibility
+      updateClearBtnVisibility();
     }
   });
 
@@ -115,23 +144,32 @@ function editItem(value, id) {
 
   // alert
   alert("Task edit successful!", "normal");
+
+  // update storage
+  localStorage.setItem(key, JSON.stringify(todoItemsArr));
 }
 
 function deleteItem(e) {
   const currentItem = e.currentTarget.parentElement.parentElement;
   let currentdataId = currentItem.dataset.id;
-  let currentValue = getCurrentValueFromArr(currentdataId);
   currentItem.remove();
   todoItemsArr = todoItemsArr.filter((item) => {
     if (item.id !== currentdataId) {
       return item;
     }
   });
+
+  // update storage
+  localStorage.setItem(key, JSON.stringify(todoItemsArr));
   alert("Task deleted!", "serious");
 
   if (todoItemsArr.length === 0) {
     isEmpty(true);
   }
+
+  // clear button visibility
+  resetClearBtns();
+  updateClearBtnVisibility();
 }
 
 function getCurrentValueFromArr(id) {
@@ -181,4 +219,52 @@ function alert(msg, tone) {
       alertBox.style.display = "none";
     }, 300); // 500 - since transition time is .5s in css
   }, 2000);
+}
+
+clearBtn.addEventListener("click", () => {
+  clearBtn.style.display = "none";
+  confirmBtns.style.display = "block";
+  clearQuestion.textContent = "Are you sure?";
+
+  yesBtn.addEventListener("click", () => {
+    confirmAction();
+    confirmBtns.style.display = "none";
+    clearBtn.style.display = "block";
+    clearQuestion.textContent = "More actions:";
+    updateClearBtnVisibility();
+  });
+  noBtn.addEventListener("click", () => {
+    resetClearBtns();
+  });
+
+  function confirmAction() {
+    isEmpty(true);
+    todoItemsArr = [];
+    let todoItems = document.querySelectorAll(".todo-item");
+    todoItems.forEach((item) => {
+      item.remove();
+    });
+    localStorage.removeItem(key);
+    updateClearBtnVisibility();
+    alert("All deleted!", "serious");
+  }
+});
+
+function resetClearBtns() {
+  confirmBtns.style.display = "none";
+  clearQuestion.textContent = "More actions:";
+  if (todoItemsArr.length > 1) {
+    clearBtn.style.display = "block";
+  }
+}
+
+function updateClearBtnVisibility() {
+  if (todoItemsArr.length > 1) {
+    clearBtn.style.display = "block";
+    clearBtnFooter.style.display = "block";
+    resetClearBtns();
+  } else {
+    clearBtn.style.display = "none";
+    clearBtnFooter.style.display = "none";
+  }
 }
