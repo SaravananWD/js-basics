@@ -48,13 +48,16 @@ function initSetup() {
   } else {
     todoItemsArr = JSON.parse(localStorage.getItem(key));
     todoItemsArr.forEach((item) => {
-      todoItemsContainer.innerHTML += `<div data-id="${item.id}" class="todo-item"><div class="todo-text">${item.value}</div>
+      createElements(item.value, item.id);
+
+      /* todoItemsContainer.innerHTML += `<div data-id="${item.id}" class="todo-item"><div class="todo-text">${item.value}</div>
                         <div class="buttons">
                             <button class="btn-edit">Edit</button>
                             <button class="btn-delete">Delete</button>
                         </div>
-                        </div>`;
+                        </div>`; */
     });
+
     // clear button visibility
     updateClearBtnVisibility();
   }
@@ -65,26 +68,10 @@ function addItem(value, id) {
   todoItemsArr.push({ value, id });
 
   // add html element
-  let element = document.createElement("div");
-  let attribute = document.createAttribute("data-id");
-  attribute.value = id;
-  element.setAttributeNode(attribute);
-  element.classList.add("todo-item");
-  element.innerHTML = ` <div class="todo-text">${value}</div>
-                        <div class="buttons">
-                            <button class="btn-edit">Edit</button>
-                            <button class="btn-delete">Delete</button>
-                        </div>`;
-  todoItemsContainer.appendChild(element);
+  createElements(value, id);
 
   // hide empty error message
   isEmpty(false);
-
-  // add event listeners for edit & delete
-  let editBtn = element.querySelector(".btn-edit");
-  let deleteBtn = element.querySelector(".btn-delete");
-  editBtn.addEventListener("click", processEditRequest);
-  deleteBtn.addEventListener("click", deleteItem);
 
   // reset text box
   textBox.value = "";
@@ -104,6 +91,27 @@ function isEmpty(empty) {
   empty
     ? (emptyMessage.style.display = "block")
     : (emptyMessage.style.display = "none");
+}
+
+function createElements(value, id) {
+  // add html element
+  let element = document.createElement("div");
+  let attribute = document.createAttribute("data-id");
+  attribute.value = id;
+  element.setAttributeNode(attribute);
+  element.classList.add("todo-item");
+  element.innerHTML = ` <div class="todo-text">${value}</div>
+                        <div class="buttons">
+                            <button class="btn-edit">Edit</button>
+                            <button class="btn-delete">Delete</button>
+                        </div>`;
+  todoItemsContainer.appendChild(element);
+
+  // add event listeners for edit & delete
+  let editBtn = element.querySelector(".btn-edit");
+  let deleteBtn = element.querySelector(".btn-delete");
+  editBtn.addEventListener("click", processEditRequest);
+  deleteBtn.addEventListener("click", deleteItem);
 }
 
 function processEditRequest(e) {
@@ -170,6 +178,12 @@ function deleteItem(e) {
   // clear button visibility
   resetClearBtns();
   updateClearBtnVisibility();
+
+  // reset - this resets textbox area when a user click edit on a task but deletes it without commiting edits
+  textBox.value = "";
+  submitBtn.value = "Add a task";
+  editFlag = false;
+  textBox.removeAttribute("data-id");
 }
 
 function getCurrentValueFromArr(id) {
