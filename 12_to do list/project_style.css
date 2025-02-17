@@ -58,9 +58,8 @@ input#submit:hover {
 }
 
 .todo-item {
-    /* border-top: 1px solid rgba(255, 255, 255, .1); */
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     margin-bottom: 15px;
 }
@@ -148,10 +147,15 @@ input#submit:hover {
 }
 
 
+
+.todo-footer {
+    padding-top: 15px;
+}
+
 .todo-footer p {
     margin-bottom: 10px;
     font-size: .9rem;
-    color: #c0c0c0;
+    color: rgba(255, 255, 255, .6);
     font-weight: 600;
 }
 
@@ -179,13 +183,9 @@ button.no-clear {
 
 @media only screen and (max-width: 740px) {
     .todo-item {
-        /* border-top: 1px solid rgba(255, 255, 255, .1); */
         width: 100%;
         display: flex;
         flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 15px;
     }
 
     .todo-text {
