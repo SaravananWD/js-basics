@@ -163,3 +163,18 @@
     background-color: rgba(0, 0, 0, 0.3);
 
 }
+
+
+@media only screen and (max-width: 450px) {
+
+.slider-section {width:100%;}
+
+.nav-btn.prev-btn {
+    left: 0;
+}
+ 
+.nav-btn.next-btn {
+    right: 0;
+}
+
+}
