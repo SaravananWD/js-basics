@@ -23,8 +23,7 @@ let slidesData = [
 
   `<div class="slide-info">
             <h3>Title text for Slide 5</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio veritatis iste
-            voluptatem.</p><img src="./img/hus.jpg"><p>Temporibus eos sit consequuntur nemo culpa ratione, pariatur qui, commodi</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio.</p><img src="./img/hus.jpg"><p>Temporibus eos sit consequuntur nemo culpa ratione, pariatur qui, commodi</p>
        </div>`,
   `<div class="slide-info"><h3>Title text for Slide 6</h3>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio veritatis iste
