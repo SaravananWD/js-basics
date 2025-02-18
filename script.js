@@ -47,6 +47,10 @@ const projects = [
     name: "To Do List",
     url: "./12_to do list/index.html",
   },
+  {
+    name: "Slider",
+    url: "./13_slider/index.html",
+  },
 ];
 const projectsContainer = document.querySelector(".projects-container");
 
