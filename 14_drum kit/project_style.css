@@ -1,0 +1,40 @@
+/* Project related CSS */
+
+.keys {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    gap: .4rem;
+    grid-template-columns: 6rem 6rem 6rem;
+    margin-bottom: 20px;
+}
+
+.key {
+    background-color: #282828;
+    text-align: center;
+    padding: .7rem .5rem;
+    border: 3px solid rgba(0, 0, 0, 0);
+    transition: all .07s ease-in-out;
+    cursor: default;
+}
+
+kbd {
+    display: block;
+    font-size: 1.5rem;
+    color: #dedede;
+    font-weight: 600;
+}
+
+span.sound {
+    color: #999;
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: .05rem;
+}
+
+.playing {
+    transform: scale(1.2);
+    border-color: #00ccff;
+    border-radius: 3px;
+    box-shadow: 0 0 15px 3px rgba(0, 204, 255, .4);
+}

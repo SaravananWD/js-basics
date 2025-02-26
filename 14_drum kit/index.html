@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drum Kit - JavaScript Basics</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="project_style.css">
+
+</head>
+
+<body>
+    <section class="container">
+
+        <main class="content-block">
+            <p>This is a demo of the <strong class="project-name">Drum Kit</strong> project, part of my
+                <strong><a href="https://github.com/SaravananWD/js-basics" target="_blank">js-basics</a></strong>
+                repository.
+            </p>
+            <section class="new-section">
+
+                <div class="keys">
+
+                    <div class="key" data-key="103">
+                        <kbd>7</kbd>
+                        <span class="sound">snare</span>
+                    </div>
+                    <div class="key" data-key="104">
+                        <kbd>8</kbd>
+                        <span class="sound">tom</span>
+                    </div>
+                    <div class="key" data-key="105">
+                        <kbd>9</kbd>
+                        <span class="sound">tink</span>
+                    </div>
+                    <div class="key" data-key="100">
+                        <kbd>4</kbd>
+                        <span class="sound">openhat</span>
+                    </div>
+                    <div class="key" data-key="101">
+                        <kbd>5</kbd>
+                        <span class="sound">boom</span>
+                    </div>
+                    <div class="key" data-key="102">
+                        <kbd>6</kbd>
+                        <span class="sound">ride</span>
+                    </div>
+                    <div class="key" data-key="97">
+                        <kbd>1</kbd>
+                        <span class="sound">clap</span>
+                    </div>
+                    <div class="key" data-key="98">
+                        <kbd>2</kbd>
+                        <span class="sound">hihat</span>
+                    </div>
+                    <div class="key" data-key="99">
+                        <kbd>3</kbd>
+                        <span class="sound">kick</span>
+                    </div>
+
+
+                </div>
+
+                <audio src="sounds/clap.wav" data-key="97"></audio>
+                <audio src="sounds/hihat.wav" data-key="98"></audio>
+                <audio src="sounds/kick.wav" data-key="99"></audio>
+                <audio src="sounds/openhat.wav" data-key="100"></audio>
+                <audio src="sounds/boom.wav" data-key="101"></audio>
+                <audio src="sounds/ride.wav" data-key="102"></audio>
+                <audio src="sounds/snare.wav" data-key="103"></audio>
+                <audio src="sounds/tom.wav" data-key="104"></audio>
+                <audio src="sounds/tink.wav" data-key="105"></audio>
+
+            </section>
+            <section class="new-section opaconhover fsize-s">
+                <p class="rm-margin">Happy coding! <span class="emoji">&#128516;</span>
+                </p>
+            </section>
+        </main>
+    </section>
+    <script src="script.js"></script>
+</body>
+
+</html>

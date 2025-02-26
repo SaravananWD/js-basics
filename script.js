@@ -51,6 +51,10 @@ const projects = [
     name: "Slider",
     url: "./13_slider/index.html",
   },
+  {
+    name: "Slider",
+    url: "./14_drum kit/index.html",
+  },
 ];
 const projectsContainer = document.querySelector(".projects-container");
 
