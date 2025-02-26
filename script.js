@@ -52,7 +52,7 @@ const projects = [
     url: "./13_slider/index.html",
   },
   {
-    name: "Slider",
+    name: "Drum Kit",
     url: "./14_drum kit/index.html",
   },
 ];
