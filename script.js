@@ -50,6 +50,7 @@ const projects = [
   {
     name: "To Do List (Added History)",
     url: "./12-1_to do list (added history)/index.html",
+    versionUpdate: "12-1",
   },
   {
     name: "Slider",
@@ -64,6 +65,8 @@ const projectsContainer = document.querySelector(".projects-container");
 
 let count = 1;
 projects.forEach((project) => {
-  projectsContainer.innerHTML += `<a class="project-info" href="${project.url}"><span>${count}</span>${project.name}</a>`;
-  count++;
+  projectsContainer.innerHTML += `<a class="project-info" href="${
+    project.url
+  }"><span>${project.versionUpdate || count}</span>${project.name}</a>`;
+  project.versionUpdate || count++;
 });
