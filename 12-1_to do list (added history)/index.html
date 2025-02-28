@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To do list - JavaScript Basics</title>
+    <title>To do list (Added History) - JavaScript Basics</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="project_style.css">
 
@@ -14,7 +14,8 @@
     <section class="container">
 
         <main class="content-block">
-            <p>This is a demo of the <strong class="project-name">To do list</strong> project, part of my
+            <p>This is a demo of the <strong class="project-name">To do list (Added History)</strong> project, part of
+                my
                 <strong><a href="https://github.com/SaravananWD/js-basics" target="_blank">js-basics</a></strong>
                 repository.
             </p>
@@ -34,7 +35,14 @@
                     <div class="alert-message">
                         This is an example of an alert message.
                     </div>
-                    <h3>Add a task <span class="em">to do</span></h3>
+                    <div class="task-title">
+                        <h3>Add a task <span class="em">to do</span></h3>
+
+                        <div class="history-btns">
+                            <button class="undo-btn" disabled>Undo</button>
+                            <button class="redo-btn" disabled>Redo</button>
+                        </div>
+                    </div>
                     <div class="input-container">
                         <form class="input-form">
                             <input type="text" id="textbox" placeholder="Start typing..." autocomplete="off">
@@ -53,8 +61,6 @@
                                 <button class="btn-delete">Delete</button>
                             </div>
                         </div> -->
-
-
                     </div>
                     <div class="todo-footer">
                         <p id="clear-question">More actions:</p>

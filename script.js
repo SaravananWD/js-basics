@@ -48,6 +48,10 @@ const projects = [
     url: "./12_to do list/index.html",
   },
   {
+    name: "To Do List (Added History)",
+    url: "./12-1_to do list (added history)/index.html",
+  },
+  {
     name: "Slider",
     url: "./13_slider/index.html",
   },
