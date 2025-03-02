@@ -86,9 +86,7 @@ function addItem(value, id) {
   localStorage.setItem(key, JSON.stringify(todoItemsArr));
 
   // HISTORY PART
-  history.push(JSON.parse(JSON.stringify(todoItemsArr)));
-  historyIndex++;
-  updateHistoryButtonsVisibility();
+  updateHistory(true);
 
   // clear button visibility
   updateClearBtnVisibility();
@@ -149,9 +147,7 @@ function editItem(value, id) {
       putCurrentValueToArr(value, id);
 
       // HISTORY PART
-      history.push(JSON.parse(JSON.stringify(todoItemsArr)));
-      historyIndex++;
-      updateHistoryButtonsVisibility();
+      updateHistory(true);
 
       // clear button visibility
       updateClearBtnVisibility();
@@ -187,9 +183,7 @@ function deleteItem(e) {
   alert("Task deleted!", "serious");
 
   // HISTORY PART
-  history.push(JSON.parse(JSON.stringify(todoItemsArr)));
-  historyIndex++;
-  updateHistoryButtonsVisibility();
+  updateHistory(true);
 
   // clear button visibility
   resetClearBtns();
@@ -279,9 +273,7 @@ clearBtn.addEventListener("click", () => {
     alert("All deleted!", "serious");
 
     // HISTORY PART
-    history.push(JSON.parse(JSON.stringify(todoItemsArr)));
-    historyIndex++;
-    updateHistoryButtonsVisibility();
+    updateHistory(true);
   }
 });
 
@@ -305,19 +297,35 @@ function updateClearBtnVisibility() {
 }
 
 // HISTORY PART
+
+// undo redo
 function updateState(action) {
-  action == "undo" ? historyIndex-- : historyIndex++;
+  action === "undo" ? historyIndex-- : historyIndex++;
 
   todoItemsArr = history[historyIndex];
   localStorage.setItem(key, JSON.stringify(todoItemsArr));
   removeUIElements();
   initSetup();
-  updateHistoryButtonsVisibility();
+  updateHistory(false); // false argument skips history and historyIndex modifications inside updateHistory() function.
   updateClearBtnVisibility();
   isEmpty();
 }
 
-function updateHistoryButtonsVisibility() {
+// update histories
+function updateHistory(historyUpdate) {
+  // update history states
+  if (historyUpdate) {
+    let newState = JSON.parse(JSON.stringify(todoItemsArr));
+    if (history.length > historyIndex + 1) {
+      let tempHistory = history.slice(0, historyIndex + 1);
+      tempHistory.push(newState);
+      history = tempHistory.slice();
+    } else {
+      history.push(newState);
+    }
+    historyIndex++;
+  }
+
   // enable or disable undo button
   historyIndex > 0 ? (undoBtn.disabled = false) : (undoBtn.disabled = true);
 
